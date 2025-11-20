@@ -18,6 +18,7 @@ build:
     - export CXX="${CLANGXX}"  # [osx]
     - export CFLAGS="${CFLAGS} -D_FORTIFY_SOURCE=2"  # [osx]
     - export CXXFLAGS="${CXXFLAGS} -D_FORTIFY_SOURCE=2"  # [osx]
+    - export NO_STABLE_ABI=true
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
   number: 0
