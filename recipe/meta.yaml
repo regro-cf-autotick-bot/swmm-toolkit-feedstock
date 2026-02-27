@@ -41,6 +41,7 @@ requirements:
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
+    - vcomp14  # [win]
   host:
     - python
     - setuptools >=42
@@ -48,6 +49,7 @@ requirements:
     - pip
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
+    - vcomp14  # [win]
   run:
     - python
     - aenum >=3.1.11
