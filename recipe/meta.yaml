@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  - url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
     sha256: 83e8e9dccbac785aa4868643cdfc3972ff7ffe06f04fdfa6f603b82f5c643e72
 
 build:
@@ -19,7 +19,7 @@ build:
     - export CXXFLAGS="${CXXFLAGS} -D_FORTIFY_SOURCE=2"  # [osx]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
-  number: 0
+  number: 1
   skip: true  # [py<38]
   missing_dso_whitelist:   # [win]
     - "*/swmm5.dll"  # [win]
